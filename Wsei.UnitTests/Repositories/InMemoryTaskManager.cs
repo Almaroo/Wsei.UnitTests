@@ -10,7 +10,7 @@ public class InMemoryTaskManager : ITaskManager
 
     public Task? GetTask(int id) => _items.FirstOrDefault(x => x.Id == id);
 
-    public IEnumerable<Task> GetTasks() => _items;
+    public IEnumerable<Task> GetTasks() => _items.ToList();
 
     public int AddTask(Task item)
     {
